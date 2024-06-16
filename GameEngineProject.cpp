@@ -8,7 +8,7 @@ int main()
     std::cout << "Hello World!\n";
 }
 
-// Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage dqd
+// Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogageS
 // Déboguer le programme : F5 ou menu Déboguer > Démarrer le débogage
 
 // Astuces pour bien démarrer : 

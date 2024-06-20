@@ -12,10 +12,12 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	{
 	case WM_CREATE:
 		// event fired when the window is created
+		window->onCreate();
 		break;
 
 	case WM_DESTROY:
 		// event fired when the window is destroyed
+		window->onDestroy();
 		::PostQuitMessage(0);
 		break;
 
@@ -45,6 +47,9 @@ bool Window::init()
 	if(!::RegisterClassEx(&wc))//register the class; if fail return false
 		return false;
 
+	if (!window)
+		window = this;
+
 	//create window
 	m_hwnd=::CreateWindowEx(WS_EX_OVERLAPPEDWINDOW, "MyWindowClass", "DirectX Application", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 1024, 768, NULL, NULL, NULL, NULL);
 
@@ -56,8 +61,27 @@ bool Window::init()
 	::ShowWindow(m_hwnd, SW_SHOW);
 	::UpdateWindow(m_hwnd);
 
-	if (!window)
-		window = this;
+	
+
+	//set the flag to indicate the window is initialized and running
+	m_is_run = true;
+	return true;
+}
+
+bool Window::broadcast()
+{
+	MSG msg;
+
+
+	while (::PeekMessage(&msg, NULL, 0, 0, PM_REMOVE) > 0)
+	{
+		TranslateMessage(&msg);
+		DispatchMessage(&msg);
+	}
+
+	window->onUpdate();
+
+	Sleep(0);
 
 	return true;
 }
@@ -74,6 +98,16 @@ bool Window::release()
 	return true;
 }
 
+bool Window::isRun()
+{
+	return m_is_run;
+}
+
 Window::~Window()
 {
+}
+
+void Window::onDestroy()
+{
+	m_is_run = false;
 }

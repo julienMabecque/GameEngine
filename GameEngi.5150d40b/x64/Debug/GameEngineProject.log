@@ -1,2 +1,17 @@
-﻿  GameEngineProject.cpp
-  GameEngineProject.vcxproj -> C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\x64\Debug\GameEngineProject.exe
+﻿  Window.cpp
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp(42,21): error C2440: '=' : impossible de convertir de 'const char [14]' en 'LPCWSTR'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp(42,21):
+  Les types pointés ne sont pas liés ; la conversion nécessite un reinterpret_cast, un cast de style C ou un cast de style fonction entre parenthèses.
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp(43,20): error C2440: '=' : impossible de convertir de 'const char [1]' en 'LPCWSTR'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp(43,20):
+  Les types pointés ne sont pas liés ; la conversion nécessite un reinterpret_cast, un cast de style C ou un cast de style fonction entre parenthèses.
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp(54,11): error C2664: 'HWND CreateWindowExW(DWORD,LPCWSTR,LPCWSTR,DWORD,int,int,int,int,HWND,HMENU,HINSTANCE,LPVOID)' : impossible de convertir l'argument 2 de 'const char [14]' en 'LPCWSTR'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp(54,50):
+  Les types pointés ne sont pas liés ; la conversion nécessite un reinterpret_cast, un cast de style C ou un cast de style fonction entre parenthèses.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winuser.h(4437,1):
+  voir la déclaration de 'CreateWindowExW'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp(54,11):
+  lors de la tentative de mise en correspondance de la liste des arguments '(long, const char [14], const char [20], long, int, int, int, int, int, int, int, int)'
+  

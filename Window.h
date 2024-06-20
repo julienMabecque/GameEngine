@@ -9,7 +9,11 @@ public:
 
 	bool init();
 
+	bool broadcast();
+
 	bool release();
+
+	bool isRun();
 
 	~Window();
 
@@ -17,9 +21,10 @@ public:
 
 	virtual void onCreate() = 0;
 	virtual void onUpdate() = 0;
-	virtual void onDestroy() = 0;
+	virtual void onDestroy();
 	
 protected:
 	HWND m_hwnd;
+	bool m_is_run;
 };
 

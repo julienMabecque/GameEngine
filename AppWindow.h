@@ -1,5 +1,6 @@
 #pragma once
 #include "Window.h"
+#include "GraphicsEngine.h"
 
 
 class AppWindow: public Window
@@ -10,8 +11,8 @@ class AppWindow: public Window
 		
 		
 		// Hérité via Window
-		void onCreate() override;
-		void onUpdate() override;
-		void onDestroy() override;
+		virtual void onCreate() override;
+		virtual void onUpdate() override;
+		virtual void onDestroy() override;
 };
 

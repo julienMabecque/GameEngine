@@ -39,8 +39,8 @@ bool Window::init()
 	wc.hIcon = LoadIcon(NULL,IDI_APPLICATION);
 	wc.hIconSm = LoadIcon(NULL, IDI_APPLICATION);
 	wc.hInstance = NULL;
-	wc.lpszClassName = "MyWindowClass";
-	wc.lpszMenuName = "";
+	wc.lpszClassName = L"MyWindowClass";
+	wc.lpszMenuName = L"";
 	wc.style = NULL;
 	wc.lpfnWndProc = &WndProc;
 
@@ -51,7 +51,7 @@ bool Window::init()
 		window = this;
 
 	//create window
-	m_hwnd=::CreateWindowEx(WS_EX_OVERLAPPEDWINDOW, "MyWindowClass", "DirectX Application", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 1024, 768, NULL, NULL, NULL, NULL);
+	m_hwnd=::CreateWindowEx(WS_EX_OVERLAPPEDWINDOW, L"MyWindowClass", L"DirectX Application", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 1024, 768, NULL, NULL, NULL, NULL);
 
 	//creation failed
 	if (!m_hwnd)
@@ -104,6 +104,14 @@ bool Window::isRun()
 }
 
 Window::~Window()
+{
+}
+
+void Window::onCreate()
+{
+}
+
+void Window::onUpdate()
 {
 }
 

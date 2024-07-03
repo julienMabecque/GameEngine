@@ -1,2 +1,86 @@
-﻿  Window.cpp
-  GameEngineProject.vcxproj -> C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\x64\Debug\GameEngineProject.exe
+﻿  AppWindow.cpp
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.h(6,1): error C2011: 'SwapChain' : redéfinition du type 'class'
+  (compiler le fichier source 'AppWindow.cpp')
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GraphicsEngine.h(5,7):
+  voir la déclaration de 'SwapChain'
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(20,2): error C2027: utilisation du type non défini 'SwapChain'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GraphicsEngine.h(5,7):
+  voir la déclaration de 'SwapChain'
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(31,2): error C2027: utilisation du type non défini 'SwapChain'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GraphicsEngine.h(5,7):
+  voir la déclaration de 'SwapChain'
+  
+  GraphicsEngine.cpp
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.h(6,1): error C2011: 'SwapChain' : redéfinition du type 'class'
+  (compiler le fichier source 'GraphicsEngine.cpp')
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GraphicsEngine.h(5,7):
+  voir la déclaration de 'SwapChain'
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GraphicsEngine.cpp(63,22): error C2027: utilisation du type non défini 'SwapChain'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GraphicsEngine.h(5,7):
+  voir la déclaration de 'SwapChain'
+  
+  main.cpp
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.h(6,1): error C2011: 'SwapChain' : redéfinition du type 'class'
+  (compiler le fichier source 'main.cpp')
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GraphicsEngine.h(5,7):
+  voir la déclaration de 'SwapChain'
+  
+  SwapChain.cpp
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GraphicsEngine.h(6,1): error C2011: 'SwapChain' : redéfinition du type 'class'
+  (compiler le fichier source 'SwapChain.cpp')
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.h(5,7):
+  voir la déclaration de 'SwapChain'
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.cpp(4,12): error C2027: utilisation du type non défini 'SwapChain'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.h(5,7):
+  voir la déclaration de 'SwapChain'
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.cpp(5,1): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.cpp(6,1): warning C4508: '{ctor}' : la fonction doit retourner une valeur ; type de retour 'void' pris par défaut
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.cpp(8,17): error C2027: utilisation du type non défini 'SwapChain'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.h(5,7):
+  voir la déclaration de 'SwapChain'
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.cpp(10,45): error C2248: 'GraphicsEngine::m_d3d_device' : impossible d'accéder à private membre déclaré(e) dans la classe 'GraphicsEngine'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GraphicsEngine.h(24,17):
+  voir la déclaration de 'GraphicsEngine::m_d3d_device'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GraphicsEngine.h(8,7):
+  voir la déclaration de 'GraphicsEngine'
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.cpp(28,36): error C2248: 'GraphicsEngine::m_dxgi_factory' : impossible d'accéder à private membre déclaré(e) dans la classe 'GraphicsEngine'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GraphicsEngine.h(30,17):
+  voir la déclaration de 'GraphicsEngine::m_dxgi_factory'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GraphicsEngine.h(8,7):
+  voir la déclaration de 'GraphicsEngine'
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.cpp(28,85): error C2065: 'm_swap_chain' : identificateur non déclaré
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.cpp(38,17): error C2027: utilisation du type non défini 'SwapChain'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.h(5,7):
+  voir la déclaration de 'SwapChain'
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.cpp(40,2): error C2065: 'm_swap_chain' : identificateur non déclaré
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.cpp(41,9): error C2355: 'this' : ne peut être référencé qu'à l'intérieur de fonctions membres non static ou d'initialiseurs de membres de données non static
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.cpp(45,13): error C2027: utilisation du type non défini 'SwapChain'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.h(5,7):
+  voir la déclaration de 'SwapChain'
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.cpp(46,1): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.cpp(47,1): warning C4508: '{dtor}' : la fonction doit retourner une valeur ; type de retour 'void' pris par défaut
+  Window.cpp
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp(24,11): error C2374: 'window' : redéfinition ; initialisation multiple
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp(15,11):
+  voir la déclaration de 'window'
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp(24,19): warning C4312: 'cast de type' : la conversion de 'LONG' en 'Window *' d'une taille supérieure
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp(22,2): error C2360: l'initialisation de 'window' est ignorée par l'étiquette 'case'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp(15,11):
+  voir la déclaration de 'window'
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp(29,2): error C2361: l'initialisation de 'window' est ignorée par l'étiquette 'default'
+  C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp(24,11):
+  voir la déclaration de 'window'
+  
+  Génération de code en cours...

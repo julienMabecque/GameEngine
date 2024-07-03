@@ -17,6 +17,9 @@ public:
 
 	~Window();
 
+	RECT getClientWindowRect();
+	void setHWND(HWND hwnd);
+
 	//EVENT
 
 	virtual void onCreate() = 0;

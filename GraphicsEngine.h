@@ -2,8 +2,7 @@
 #include <d3d11.h>
 
 
-class SwapChain
-{};
+class SwapChain;
 
 class GraphicsEngine
 {

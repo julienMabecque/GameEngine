@@ -7,7 +7,7 @@ class SwapChain
 	public:
 		SwapChain();
 
-		bool init(HWND hwnd, UINT width, UINT height); 
+		bool init(HWND hwnd, UINT width, UINT height); //initialize the swap chain
 
 		bool release();
 

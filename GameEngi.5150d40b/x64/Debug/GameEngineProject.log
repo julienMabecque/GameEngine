@@ -1,3 +1,6 @@
-﻿  Window.cpp
+﻿  GraphicsEngine.cpp
+  main.cpp
+  Window.cpp
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp(26,21): warning C4312: 'cast de type' : la conversion de 'LONG' en 'Window *' d'une taille supérieure
+  Génération de code en cours...
   GameEngineProject.vcxproj -> C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\x64\Debug\GameEngineProject.exe

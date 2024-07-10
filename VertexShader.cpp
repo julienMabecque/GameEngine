@@ -5,11 +5,11 @@ VertexShader::VertexShader()
 {
 }
 
-bool VertexShader::release()
+void VertexShader::release()
 {
     m_vs->Release();
     delete this;
-    return true;
+   
 }
 
 VertexShader::~VertexShader()

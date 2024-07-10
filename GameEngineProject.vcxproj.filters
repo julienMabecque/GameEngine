@@ -78,4 +78,9 @@
       <Filter>GameEngine\GraphicsEngine\VertexShader</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="VertexShader.hlsl">
+      <Filter>App</Filter>
+    </FxCompile>
+  </ItemGroup>
 </Project>

@@ -7,15 +7,20 @@ VertexShader::VertexShader()
 
 bool VertexShader::release()
 {
-    return false;
+    m_vs->Release();
+    delete this;
+    return true;
 }
 
 VertexShader::~VertexShader()
 {
 }
 
-bool VertexShader::init()
+bool VertexShader::init(const void* shader_byte_code, size_t byte_code_size)
 {
-    
-    return false;
+    if (!SUCCEEDED(GraphicsEngine::get()->m_d3d_device->CreateVertexShader(shader_byte_code, byte_code_size, nullptr, &m_vs)))
+    {
+		return false;
+	}
+    return true;
 }

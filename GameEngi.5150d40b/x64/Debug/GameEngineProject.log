@@ -1,14 +1,3 @@
-﻿  AppWindow.cpp
-  DeviceContext.cpp
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(50,64): warning C4267: 'argument' : conversion de 'size_t' en 'UINT', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\DeviceContext.cpp(48,13): warning C4244: '=' : conversion de 'UINT' en 'FLOAT', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\DeviceContext.cpp(49,14): warning C4244: '=' : conversion de 'UINT' en 'FLOAT', perte possible de données
-  GraphicsEngine.cpp
-  main.cpp
-  PixelShader.cpp
-  SwapChain.cpp
-  VertexBuffer.cpp
+﻿  VertexBuffer.cpp
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\VertexBuffer.cpp(27,100): warning C4390: ';' : une instruction contrôlée a été trouvée vide ; est-ce ce que vous souhaitiez ?
-  VertexShader.cpp
-  Génération de code en cours...
   GameEngineProject.vcxproj -> C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\x64\Debug\GameEngineProject.exe

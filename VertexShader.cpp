@@ -1,5 +1,6 @@
 #include "VertexShader.h"
 #include "GraphicsEngine.h"
+#include <iostream>
 
 VertexShader::VertexShader()
 {
@@ -7,7 +8,16 @@ VertexShader::VertexShader()
 
 void VertexShader::release()
 {
-    m_vs->Release();
+    if (m_vs) // Vérifiez si m_vs n'est pas nullptr avant de l'utiliser
+    {
+        m_vs->Release();
+        m_vs = nullptr; // Bonne pratique : mettre le pointeur à nullptr après la libération
+        std::cout << "VertexShader released successfully." << std::endl;
+    }
+    else
+    {
+        std::cout << "VertexShader::release called, but m_vs is already nullptr." << std::endl;
+    }
     delete this;
    
 }

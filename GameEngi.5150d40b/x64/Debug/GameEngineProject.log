@@ -1,3 +1,3 @@
-﻿  VertexBuffer.cpp
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\VertexBuffer.cpp(27,100): warning C4390: ';' : une instruction contrôlée a été trouvée vide ; est-ce ce que vous souhaitiez ?
+﻿  AppWindow.cpp
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(53,64): warning C4267: 'argument' : conversion de 'size_t' en 'UINT', perte possible de données
   GameEngineProject.vcxproj -> C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\x64\Debug\GameEngineProject.exe

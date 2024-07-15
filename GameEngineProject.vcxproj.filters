@@ -37,6 +37,9 @@
     <Filter Include="GameEngine\Math">
       <UniqueIdentifier>{36f087de-e5b1-462f-9a39-9a1515b573aa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\IndexBuffer">
+      <UniqueIdentifier>{021e63fd-7ef3-4698-8190-f647dd294700}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -68,6 +71,9 @@
     </ClCompile>
     <ClCompile Include="ConstantBuffer.cpp">
       <Filter>GameEngine\GraphicsEngine\ConstantBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexBuffer.cpp">
+      <Filter>GameEngine\GraphicsEngine\IndexBuffer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="Matrix4x4.h">
       <Filter>GameEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexBuffer.h">
+      <Filter>GameEngine\GraphicsEngine\IndexBuffer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

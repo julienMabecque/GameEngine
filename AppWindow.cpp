@@ -6,7 +6,6 @@
 struct vertex
 {
 	Vector3D position;
-	Vector3D position1;
 	Vector3D color;
 	Vector3D color1;
 	
@@ -79,25 +78,58 @@ void AppWindow::onCreate()
 	RECT rc = this->getClientWindowRect();
 	m_swap_chain->init(this->m_hwnd, rc.right-rc.left,rc.bottom-rc.top);
 
-	vertex list[] =
+	vertex vertex_list[] =
 	{
-		{Vector3D ( -0.5f, -0.5f, 0.0f),Vector3D (-0.32f, -0.11f, 0.0f),Vector3D(0,0,0),Vector3D(0,1,0)},
-		{Vector3D ( -0.5f,  0.5f, 0.0f),Vector3D (-0.11f,  0.78f, 0.0f),Vector3D(1,1,0),Vector3D(0,1,1)},
-		{Vector3D (  0.5f, -0.5f, 0.0f),Vector3D ( 0.75f, -0.73f, 0.0f),Vector3D(0,0,1),Vector3D(1,0,0)},
-		{Vector3D (  0.5f,  0.5f, 0.0f),Vector3D ( 0.88f,  0.77f, 0.0f),Vector3D(1,1,1),Vector3D(0,0,1)}
+		//front face
+		{Vector3D (-0.5f,-0.5f,-0.5f),Vector3D(0,0,0),Vector3D(0,1,0)},
+		{Vector3D (-0.5f, 0.5f,-0.5f),Vector3D(1,1,0),Vector3D(0,1,1)},
+		{Vector3D ( 0.5f, 0.5f,-0.5f),Vector3D(0,0,1),Vector3D(1,0,0)},
+		{Vector3D ( 0.5f,-0.5f,-0.5f),Vector3D(1,1,1),Vector3D(0,0,1)},
+
+		//back face
+		{Vector3D( 0.5f,-0.5f,0.5f),Vector3D(0,0,0),Vector3D(0,1,0)},
+		{Vector3D( 0.5f, 0.5f,0.5f),Vector3D(1,1,0),Vector3D(0,1,1)},
+		{Vector3D(-0.5f, 0.5f,0.5f),Vector3D(0,0,1),Vector3D(1,0,0)},
+		{Vector3D(-0.5f,-0.5f,0.5f),Vector3D(1,1,1),Vector3D(0,0,1)}
 	};
 
 	m_vb=GraphicsEngine::get()->createVertexBuffer();
-	UINT size_list = ARRAYSIZE(list);
+	UINT size_list = ARRAYSIZE(vertex_list);
+
+	unsigned int index_list[] =
+	{
+		//front side
+		0,1,2,
+		2,3,0,
+		//back side
+		4,5,6,
+		6,7,4,
+		//top side
+		1,6,5,
+		5,2,1,
+		//bottom side
+		7,0,3,
+		3,4,7,
+		//right side
+		3,2,5,
+		5,4,3,
+		//left side
+		7,6,1,
+		1,0,7
+	};
+
+
+	m_ib=GraphicsEngine::get()->createIndexBuffer();
+
 
 
 	void* shader_byte_code = nullptr;
 	size_t size_shader = 0;
-
 	GraphicsEngine::get()->compileVertexShader(L"VertexShader.hlsl", "vsmain", &shader_byte_code, &size_shader);
 	
 	m_vs=GraphicsEngine::get()->createVertexShader(shader_byte_code, size_shader);
 	m_vb->load(list, sizeof(vertex), size_list, shader_byte_code, size_shader);
+
 	GraphicsEngine::get()->releaseCompiledShader();
 
 	GraphicsEngine::get()->compilePixelShader(L"PixelShader.hlsl", "psmain", &shader_byte_code, &size_shader);

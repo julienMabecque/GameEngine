@@ -40,12 +40,25 @@ void AppWindow::updateQuadPosition()
 
 	//cc.m_world.setTranslation(Vector3D::lerp(Vector3D(-2,-2,0),Vector3D(2,2,0), m_delta_pos));
 
-	m_delta_scale += m_delta_time / 0.15f;
+	m_delta_scale += m_delta_time / 0.55f;
 
-	cc.m_world.setScale(Vector3D::lerp(Vector3D(0.5, 0.5, 0), Vector3D(100.0f, 100.0f, 0), (sin(m_delta_scale)+1.0f)/2.0f));
+	//cc.m_world.setScale(Vector3D::lerp(Vector3D(0.5, 0.5, 0), Vector3D(100.0f, 100.0f, 0), (sin(m_delta_scale)+1.0f)/2.0f));
 
-	temp.setTranslation(Vector3D::lerp(Vector3D(-1.5f, -1.5f, 0), Vector3D(1.5f, 1.5f, 0), m_delta_pos));
+	//temp.setTranslation(Vector3D::lerp(Vector3D(-1.5f, -1.5f, 0), Vector3D(1.5f, 1.5f, 0), m_delta_pos));
 
+	//cc.m_world *= temp;
+	cc.m_world.setScale(Vector3D(1, 1, 1));
+
+	temp.setIdentity();
+	temp.setRotationZ(m_delta_scale);
+	cc.m_world *= temp;
+
+	temp.setIdentity();
+	temp.setRotationY(m_delta_scale);
+	cc.m_world *= temp;
+
+	temp.setIdentity();
+	temp.setRotationX(m_delta_scale);
 	cc.m_world *= temp;
 
 
@@ -92,6 +105,7 @@ void AppWindow::onCreate()
 		{Vector3D(-0.5f, 0.5f,0.5f),Vector3D(0,0,1),Vector3D(1,0,0)},
 		{Vector3D(-0.5f,-0.5f,0.5f),Vector3D(1,1,1),Vector3D(0,0,1)}
 	};
+	
 
 	m_vb=GraphicsEngine::get()->createVertexBuffer();
 	UINT size_list = ARRAYSIZE(vertex_list);
@@ -120,6 +134,10 @@ void AppWindow::onCreate()
 
 
 	m_ib=GraphicsEngine::get()->createIndexBuffer();
+	UINT size_index_list = ARRAYSIZE(index_list);
+	m_ib->load(index_list, size_index_list);
+
+
 
 
 
@@ -128,7 +146,7 @@ void AppWindow::onCreate()
 	GraphicsEngine::get()->compileVertexShader(L"VertexShader.hlsl", "vsmain", &shader_byte_code, &size_shader);
 	
 	m_vs=GraphicsEngine::get()->createVertexShader(shader_byte_code, size_shader);
-	m_vb->load(list, sizeof(vertex), size_list, shader_byte_code, size_shader);
+	m_vb->load(vertex_list, sizeof(vertex), size_list, shader_byte_code, size_shader);
 
 	GraphicsEngine::get()->releaseCompiledShader();
 
@@ -168,10 +186,12 @@ void AppWindow::onUpdate()
 
 	//Set the vertex buffer
 	GraphicsEngine::get()->getImmediateDeviceContext()->setVertexBuffer(m_vb);
+	//Set the incices of the triangle to draw
+	GraphicsEngine::get()->getImmediateDeviceContext()->setIndexBuffer(m_ib);
 
 
 	//Draw the vertex buffer
-	GraphicsEngine::get()->getImmediateDeviceContext()->drawTriangleStrip(m_vb->getSizeVertexList(), 0);
+	GraphicsEngine::get()->getImmediateDeviceContext()->drawIndexedTriangleList(m_ib->getSizeIndexList(),0,0);
 	m_swap_chain->present(true);
 
 	m_old_delta = m_new_delta;
@@ -186,6 +206,8 @@ void AppWindow::onDestroy()
 	m_swap_chain->release();
 	m_vs->release();
 	m_ps->release();
+	m_ib->release();
+	m_cb->release();
 	GraphicsEngine::get()->release();
 }
 

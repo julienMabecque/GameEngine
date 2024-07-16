@@ -2,7 +2,7 @@
 #include "GraphicsEngine.h"
 
 
-IndexBuffer::IndexBuffer() :m_layout(0)
+IndexBuffer::IndexBuffer() :m_buffer(0)
 {
 }
 

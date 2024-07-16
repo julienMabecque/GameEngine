@@ -1,7 +1,42 @@
 ﻿  AppWindow.cpp
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(46,114): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(57,38): warning C4244: 'argument' : conversion de 'LONG' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(56,37): warning C4244: 'argument' : conversion de 'LONG' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(100,64): warning C4267: 'argument' : conversion de 'size_t' en 'UINT', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(146,30): warning C4244: '=' : conversion de 'DWORD' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(54,20): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'AppWindow.cpp')
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(55,20): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'AppWindow.cpp')
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(56,17): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'AppWindow.cpp')
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(57,20): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'AppWindow.cpp')
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(62,20): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'AppWindow.cpp')
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(63,17): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'AppWindow.cpp')
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(64,20): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'AppWindow.cpp')
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(65,20): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'AppWindow.cpp')
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(70,20): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'AppWindow.cpp')
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(71,20): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'AppWindow.cpp')
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(72,17): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'AppWindow.cpp')
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(73,20): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'AppWindow.cpp')
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(69,38): warning C4244: 'argument' : conversion de 'LONG' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(68,37): warning C4244: 'argument' : conversion de 'LONG' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(149,71): warning C4267: 'argument' : conversion de 'size_t' en 'UINT', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(198,30): warning C4244: '=' : conversion de 'DWORD' en 'float', perte possible de données
   GameEngineProject.vcxproj -> C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\x64\Debug\GameEngineProject.exe

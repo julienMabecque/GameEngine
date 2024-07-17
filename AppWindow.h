@@ -8,8 +8,9 @@
 #include "IndexBuffer.h"
 #include "VertexShader.h"
 #include "PixelShader.h"
+#include "InputListener.h" 
 
-class AppWindow: public Window
+class AppWindow: public Window, public InputListener
 {
 	public:
 		AppWindow();
@@ -23,6 +24,10 @@ class AppWindow: public Window
 		virtual void onCreate() override;
 		virtual void onUpdate() override;
 		virtual void onDestroy() override;
+
+		// Inherited via InputListener
+		virtual void onKeyDown(int key) override;
+		virtual void onKeyUp(int key) override;
 
 	private:
 		SwapChain * m_swap_chain;
@@ -38,5 +43,9 @@ class AppWindow: public Window
 
 		float m_delta_pos;
 		float m_delta_scale;
+		float m_delta_rot;
+
+		float m_rot_x=0.0f;
+		float m_rot_y=0.0f;
 };
 

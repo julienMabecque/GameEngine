@@ -16,14 +16,27 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 			Window* window = (Window*)((LPCREATESTRUCT)lparam)->lpCreateParams;
 			SetWindowLongPtr(hwnd, GWLP_USERDATA, (LONG_PTR)window);
 			window->setHWND(hwnd);
-
 			window->onCreate();
+			break;
+		}
+		case WM_SETFOCUS:
+		{
+			// event fired when the window is focused
+			Window* window = (Window*)::GetWindowLongPtr(hwnd, GWLP_USERDATA);
+			window->onFocus();
+			break;
+		}
+		case WM_KILLFOCUS:
+		{
+			// event fired when the window lost focus
+			Window* window = (Window*)::GetWindowLongPtr(hwnd, GWLP_USERDATA);
+			window->onKillFocus();
 			break;
 		}
 		case WM_DESTROY:
 		{
 			// event fired when the window is destroyed
-			Window* window = (Window*)::GetWindowLong(hwnd, GWLP_USERDATA);
+			Window* window = (Window*)::GetWindowLongPtr(hwnd, GWLP_USERDATA);
 			window->onDestroy();
 			::PostQuitMessage(0);
 			break;
@@ -96,10 +109,8 @@ bool Window::broadcast()
 bool Window::release()
 {
 
-	if (m_hwnd)
+	if (!::DestroyWindow(m_hwnd))
 	{
-		::DestroyWindow(m_hwnd);
-		//m_hwnd = NULL;
 		return false;
 	}	
 	return true;
@@ -110,9 +121,7 @@ bool Window::isRun()
 	return m_is_run;
 }
 
-Window::~Window()
-{
-}
+
 
 RECT Window::getClientWindowRect()
 {
@@ -137,4 +146,16 @@ void Window::onUpdate()
 void Window::onDestroy()
 {
 	m_is_run = false;
+}
+
+void Window::onFocus()
+{
+}
+
+void Window::onKillFocus()
+{
+}
+
+Window::~Window()
+{
 }

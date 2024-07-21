@@ -1,4 +1,6 @@
 ﻿  InputSystem.cpp
   main.cpp
+  Window.cpp
   Génération de code en cours...
-  GameEngineProject.vcxproj -> C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\x64\Debug\GameEngineProject.exe
+InputSystem.obj : error LNK2019: symbole externe non résolu "public: __cdecl Point::~Point(void)" (??1Point@@QEAA@XZ) référencé dans la fonction "public: __cdecl InputSystem::~InputSystem(void)" (??1InputSystem@@QEAA@XZ)
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\x64\Debug\GameEngineProject.exe : fatal error LNK1120: 1 externes non résolus

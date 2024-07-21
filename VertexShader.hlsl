@@ -17,7 +17,6 @@ cbuffer constant : register(b0)
     row_major float4x4 m_world;
     row_major float4x4 m_view;
     row_major float4x4 m_proj;
-    row_major float4x4 m_scale;//temp
     unsigned int m_time;
 };
 
@@ -27,7 +26,7 @@ VS_OUTPUT vsmain(VS_INPUT input)
     //output.position = lerp(input.position, input.position1, (sin(m_time / 1000.0f) + 1.0f) / 2.0f);
     //output.color = lerp(input.color, input.color1, (sin(m_time / 1000.0f) + 1.0f) / 2.0f); // Interpolated color fixed check tuto9 28min
     
-    float4 scaled_position = mul(input.position, m_scale);//temp
+    
     
     //World space
     output.position = mul(input.position, m_world);

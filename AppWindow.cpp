@@ -277,5 +277,5 @@ void AppWindow::onRightMouseDown(const Point& mouse_pos)
 
 void AppWindow::onRightMouseUp(const Point& mouse_pos)
 {
-	m_scale_cube = 1.0f;
+	m_scale_cube = 100.0f;
 }

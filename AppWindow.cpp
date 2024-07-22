@@ -4,6 +4,8 @@
 #include "Matrix4x4.h"
 #include "InputSystem.h"
 
+#include <iostream>
+
 struct vertex
 {
 	Vector3D position;
@@ -25,7 +27,7 @@ struct constant
 AppWindow::AppWindow()
 {
 }
-void AppWindow::updateQuadPosition()
+void AppWindow::update()
 {
 	constant cc;
 	cc.m_time = ::GetTickCount();//use ptetre GetTickCount64
@@ -48,7 +50,8 @@ void AppWindow::updateQuadPosition()
 	//temp.setTranslation(Vector3D::lerp(Vector3D(-1.5f, -1.5f, 0), Vector3D(1.5f, 1.5f, 0), m_delta_pos));
 
 	//cc.m_world *= temp;
-	cc.m_world.setScale(Vector3D(m_scale_cube, m_scale_cube, m_scale_cube));
+	
+	/*cc.m_world.setScale(Vector3D(m_scale_cube, m_scale_cube, m_scale_cube));
 
 	temp.setIdentity();
 	temp.setRotationZ(0.0f);
@@ -60,10 +63,27 @@ void AppWindow::updateQuadPosition()
 
 	temp.setIdentity();
 	temp.setRotationX(m_rot_x);
-	cc.m_world *= temp;
+	cc.m_world *= temp;*/
+
+	cc.m_world.setIdentity();
+
+	Matrix4x4 world_cam;
+	world_cam.setIdentity();
+
+	temp.setIdentity();
+	temp.setRotationX(m_rot_x);
+	world_cam *= temp;
+
+	temp.setIdentity();
+	temp.setRotationY(m_rot_y);
+	world_cam *= temp;
+
+	world_cam.setTranslation(Vector3D(0, 0, -2));
+
+	world_cam.inverse();
 
 
-	cc.m_view.setIdentity();
+	cc.m_view = world_cam;
 	cc.m_proj.setOrthoLH
 	(
 		this->getClientWindowRect().right - this->getClientWindowRect().left,//400.0f
@@ -71,6 +91,35 @@ void AppWindow::updateQuadPosition()
 		-4.0f,
 		4.0f
 	);
+
+
+	/*std::cout << "World Matrix" << ":\n"; //test print matrix
+	for (int i = 0; i < 4; ++i)
+	{
+		for (int j = 0; j < 4; ++j)
+		{
+			std::cout << cc.m_view.m_mat[i][j] << " ";
+		}
+		std::cout << "\n";
+	}
+	std::cout << "View Matrix" << ":\n";
+	for (int i = 0; i < 4; ++i)
+	{
+		for (int j = 0; j < 4; ++j)
+		{
+			std::cout << cc.m_proj.m_mat[i][j] << " ";
+		}
+		std::cout << "\n";
+	}
+	std::cout << "Projection Matrix" << ":\n";
+	for (int i = 0; i < 4; ++i)
+	{
+		for (int j = 0; j < 4; ++j)
+		{
+			std::cout << cc.m_world.m_mat[i][j] << " ";
+		}
+		std::cout << "\n";
+	}*/
 
 	m_cb->update(GraphicsEngine::get()->getImmediateDeviceContext(), &cc);
 
@@ -80,6 +129,9 @@ void AppWindow::updateQuadPosition()
 AppWindow::~AppWindow()
 {
 }
+
+
+
 
 
 void AppWindow::onCreate()
@@ -182,7 +234,7 @@ void AppWindow::onUpdate()
 	//Set default shader in the graphics pipeline
 
 	
-	updateQuadPosition();
+	update();
 
 
 	//Set the constant buffer to the graphics pipeline

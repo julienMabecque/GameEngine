@@ -47,10 +47,11 @@ C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(118,44)
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(119,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
   (compiler le fichier source 'AppWindow.cpp')
   
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(90,38): warning C4244: 'argument' : conversion de 'LONG' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(89,37): warning C4244: 'argument' : conversion de 'LONG' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(205,71): warning C4267: 'argument' : conversion de 'size_t' en 'UINT', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(258,30): warning C4244: '=' : conversion de 'DWORD' en 'float', perte possible de données
-  main.cpp
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(147,16): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'AppWindow.cpp')
+  
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(216,71): warning C4267: 'argument' : conversion de 'size_t' en 'UINT', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(269,30): warning C4244: '=' : conversion de 'DWORD' en 'float', perte possible de données
+  InputSystem.cpp
   Génération de code en cours...
   GameEngineProject.vcxproj -> C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\x64\Debug\GameEngineProject.exe

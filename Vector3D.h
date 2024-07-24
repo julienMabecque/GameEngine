@@ -26,6 +26,16 @@ class Vector3D
 		}
 
 
+		Vector3D operator *(float num)
+		{
+			return Vector3D(m_x*num, m_y*num, m_z*num);
+		}
+
+		Vector3D operator +(const Vector3D vec)
+		{
+			return Vector3D(m_x+ vec.m_x, m_y+vec.m_y, m_z+vec.m_z);
+		}
+
 		~Vector3D()
 		{
 

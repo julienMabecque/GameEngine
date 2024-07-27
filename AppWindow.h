@@ -31,7 +31,7 @@ class AppWindow: public Window, public InputListener
 		// Inherited via InputListener
 		virtual void onKeyDown(int key) override;
 		virtual void onKeyUp(int key) override;
-		virtual void onMouseMove(const Point& mouse_pos) override;
+		virtual void onMouseMove(const Point&mouse_pos) override;
 
 		virtual void onLeftMouseDown(const Point& mouse_pos)override;
 		virtual void onLeftMouseUp(const Point& mouse_pos) override;
@@ -39,12 +39,12 @@ class AppWindow: public Window, public InputListener
 		virtual void onRightMouseUp(const Point& mouse_pos) override;
 
 	private:
-		SwapChain * m_swap_chain;
-		VertexBuffer* m_vb;
-		VertexShader* m_vs;
-		PixelShader* m_ps;
-		ConstantBuffer* m_cb;
-		IndexBuffer* m_ib;
+		SwapChainPtr m_swap_chain;
+		VertexBufferPtr m_vb;
+		VertexShaderPtr m_vs;
+		PixelShaderPtr m_ps;
+		ConstantBufferPtr m_cb;
+		IndexBufferPtr m_ib;
 	private:
 		float m_old_delta;
 		float m_new_delta;

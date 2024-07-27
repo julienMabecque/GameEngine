@@ -3,16 +3,10 @@
 #include <exception>
 
 
-VertexBuffer::VertexBuffer(RenderSystem* m_system) : m_system(m_system),m_buffer(0),m_layout(0)
+VertexBuffer::VertexBuffer(void* list_vertices,UINT size_vertex, UINT size_list, 
+	void* shader_byte_code, UINT size_byte_shader,
+	RenderSystem* m_system) : m_system(m_system),m_buffer(0),m_layout(0)
 {
-}
-
-bool VertexBuffer::load(void* list_vertices,UINT size_vertex, UINT size_list, void* shader_byte_code, UINT size_byte_shader)
-{
-	if (m_buffer) m_buffer->Release();
-	if (m_layout) m_layout->Release();
-
-
 	D3D11_BUFFER_DESC buffer_desc = {};
 	buffer_desc.Usage = D3D11_USAGE_DEFAULT;
 	buffer_desc.ByteWidth = size_vertex * size_list;
@@ -28,7 +22,7 @@ bool VertexBuffer::load(void* list_vertices,UINT size_vertex, UINT size_list, vo
 
 	if (FAILED(m_system->m_d3d_device->CreateBuffer(&buffer_desc, &init_data, &m_buffer)))
 	{
-		return false;
+		throw std::exception("VertexBuffer not created successfully");
 	}
 
 
@@ -47,26 +41,19 @@ bool VertexBuffer::load(void* list_vertices,UINT size_vertex, UINT size_list, vo
 
 	if (FAILED(m_system->m_d3d_device->CreateInputLayout(layout, size_layout, shader_byte_code, size_byte_shader, &m_layout)))
 	{
-		return false;
+		throw std::exception("Inpout Layout not created successfully");
 	}
 
-
-	return true;
 }
+
 
 UINT VertexBuffer::getSizeVertexList()
 {
 	return this->m_size_list;
 }
 
-bool VertexBuffer::release()
+VertexBuffer::~VertexBuffer()
 {
 	m_layout->Release();
 	m_buffer->Release();
-	delete this;
-	return true;
-}
-
-VertexBuffer::~VertexBuffer()
-{
 }

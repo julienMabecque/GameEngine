@@ -2,11 +2,7 @@
 #include "RenderSystem.h"
 #include <exception>
 
-SwapChain::SwapChain(RenderSystem* m_system) : m_system(m_system)
-{
-}
-
-bool SwapChain::init(HWND hwnd, UINT width, UINT height)
+SwapChain::SwapChain(HWND hwnd, UINT width, UINT height,RenderSystem* m_system) : m_system(m_system)
 {
 	ID3D11Device*device = m_system->m_d3d_device;
 
@@ -30,7 +26,7 @@ bool SwapChain::init(HWND hwnd, UINT width, UINT height)
 
 	if (FAILED(hr))
 	{
-		return false;
+		throw std::exception("SwapChain not created successfully");
 	}
 
 	
@@ -40,7 +36,7 @@ bool SwapChain::init(HWND hwnd, UINT width, UINT height)
 
 	if (FAILED(hr))
 	{
-		return false;
+		throw std::exception("SwapChain not created successfully");
 	}
 
 	hr = device->CreateRenderTargetView(buffer, NULL, &m_rtv);
@@ -48,12 +44,10 @@ bool SwapChain::init(HWND hwnd, UINT width, UINT height)
 
 	if (FAILED(hr))
 	{
-		return false;
+		throw std::exception("SwapChain not created successfully");
 	}
-
-
-	return true;
 }
+
 
 bool SwapChain::present(bool vsync)
 {
@@ -62,13 +56,8 @@ bool SwapChain::present(bool vsync)
 	return true;
 }
 
-bool SwapChain::release()
-{
-	m_swap_chain->Release();
-	delete this;
-	return true;
-}
-
 SwapChain::~SwapChain()
 {
+	m_rtv->Release();
+	m_swap_chain->Release();
 }

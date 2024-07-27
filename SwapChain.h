@@ -5,26 +5,18 @@
 class SwapChain
 {
 	public:
-		SwapChain(RenderSystem* m_system);
-
-		bool init(HWND hwnd, UINT width, UINT height); //initialize the swap chain
-
+		SwapChain(HWND hwnd, UINT width, UINT height,RenderSystem* m_system);
 		bool present(bool vsync); //present the swap chain
-
-		bool release();
-
-
 		~SwapChain();
 
 	private:
 		IDXGISwapChain* m_swap_chain;
 		ID3D11RenderTargetView* m_rtv;
-		ID3D11DepthStencilView* m_dsv;// verifier ou le mettre ! check vidéo
+		ID3D11DepthStencilView* m_dsv;
 		RenderSystem* m_system = nullptr;
 		
 
 	private:
-		friend class GraphicsEngine;
 		friend class DeviceContext;
 
 };

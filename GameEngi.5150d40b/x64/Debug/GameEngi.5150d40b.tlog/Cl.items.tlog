@@ -7,7 +7,11 @@ C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\InputSystem.cpp;C:\
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\main.cpp;C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GameEngi.5150d40b\x64\Debug\main.obj
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\PixelShader.cpp;C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GameEngi.5150d40b\x64\Debug\PixelShader.obj
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\RenderSystem.cpp;C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GameEngi.5150d40b\x64\Debug\RenderSystem.obj
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Resource.cpp;C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GameEngi.5150d40b\x64\Debug\Resource.obj
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\ResourceManager.cpp;C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GameEngi.5150d40b\x64\Debug\ResourceManager.obj
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SwapChain.cpp;C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GameEngi.5150d40b\x64\Debug\SwapChain.obj
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Texture.cpp;C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GameEngi.5150d40b\x64\Debug\Texture.obj
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\TextureManager.cpp;C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GameEngi.5150d40b\x64\Debug\TextureManager.obj
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\VertexBuffer.cpp;C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GameEngi.5150d40b\x64\Debug\VertexBuffer.obj
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\VertexShader.cpp;C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GameEngi.5150d40b\x64\Debug\VertexShader.obj
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Window.cpp;C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\GameEngi.5150d40b\x64\Debug\Window.obj

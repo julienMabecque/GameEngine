@@ -46,6 +46,7 @@ class AppWindow: public Window, public InputListener
 		ConstantBufferPtr m_cb;
 		IndexBufferPtr m_ib;
 		TexturePtr m_wood_tex;
+		MeshPtr m_mesh;
 	private:
 		float m_old_delta;
 		float m_new_delta;

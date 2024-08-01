@@ -13,6 +13,6 @@ struct VS_OUTPUT
 VS_OUTPUT vsmain(VS_INPUT input)
 {
     VS_OUTPUT output = (VS_OUTPUT) 0;
-    output.texcoord = input.texcoord;
+    //output.texcoord = input.texcoord;
     return output;
 }

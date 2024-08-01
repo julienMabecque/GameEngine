@@ -1,19 +1,7 @@
-﻿  AppWindow.cpp
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(116,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(117,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(118,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(119,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(235,128): warning C4267: 'argument' : conversion de 'size_t' en 'UINT', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(290,30): warning C4244: '=' : conversion de 'DWORD' en 'float', perte possible de données
-  DeviceContext.cpp
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\DeviceContext.cpp(65,13): warning C4244: '=' : conversion de 'UINT' en 'FLOAT', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\DeviceContext.cpp(66,14): warning C4244: '=' : conversion de 'UINT' en 'FLOAT', perte possible de données
-  RenderSystem.cpp
-  SwapChain.cpp
-  main.cpp
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(116,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(117,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(118,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(119,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-  Génération de code en cours...
+﻿  Mesh.cpp
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Mesh.cpp(73,53): warning C4267: 'argument' : conversion de 'size_t' en '_Ty', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Mesh.cpp(73,53): warning C4267:         with
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Mesh.cpp(73,53): warning C4267:         [
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Mesh.cpp(73,53): warning C4267:             _Ty=unsigned int
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Mesh.cpp(73,53): warning C4267:         ]
   GameEngineProject.vcxproj -> C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\x64\Debug\GameEngineProject.exe

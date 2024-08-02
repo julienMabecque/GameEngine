@@ -6,8 +6,8 @@ struct PS_INPUT
 {
     float4 position : SV_POSITION;
     float2 texcoord : TEXCOORD0;
-    float3 normal : TEXCOORD1;
-    float3 direction_to_camera : TEXCOORD2;
+    float3 normal : NORMAL0;
+    float3 direction_to_camera : TEXCOORD1;
 };
 
 cbuffer constant : register(b0)
@@ -39,6 +39,7 @@ float4 psmain(PS_INPUT input) : SV_TARGET
     float3 reflected_light = reflect(m_light_direction.xyz, input.normal);
     float shininess = 30.0;
     float amount_specular_light = pow(max(0.0, dot(reflected_light, input.direction_to_camera)), shininess);
+    
     float3 specular_light = ks * amount_specular_light * is;
     
     float3 final_light = ambient_light + diffuse_light + specular_light;

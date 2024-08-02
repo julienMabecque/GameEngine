@@ -8,6 +8,7 @@ class Window
 		Window();//initailize window
 		bool isRun();
 		RECT getClientWindowRect();
+		RECT getSizeScreen();
 
 		//EVENT
 
@@ -16,6 +17,7 @@ class Window
 		virtual void onDestroy();
 		virtual void onFocus();
 		virtual void onKillFocus();
+		virtual void onSize();
 
 		~Window();//release window
 	private:

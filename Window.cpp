@@ -15,11 +15,18 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 
 		break;
 	}
+	case WM_SIZE:
+	{
+		// event fired when the window is resized
+		Window* window = (Window*)::GetWindowLongPtr(hwnd, GWLP_USERDATA);
+		if (window)window->onSize();
+		break;
+	}
 	case WM_SETFOCUS:
 	{
 		// event fired when the window is focused
 		Window* window = (Window*)::GetWindowLongPtr(hwnd, GWLP_USERDATA);
-		if  (window)window->onFocus();
+		if (window)window->onFocus();
 		break;
 	}
 	case WM_KILLFOCUS:
@@ -66,7 +73,8 @@ Window::Window()
 		window = this;*/
 
 		//create window
-	m_hwnd = ::CreateWindowEx(WS_EX_OVERLAPPEDWINDOW, L"MyWindowClass", L"DirectX Application", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 1024, 768, NULL, NULL, NULL, NULL);
+	m_hwnd = ::CreateWindowEx(WS_EX_OVERLAPPEDWINDOW, L"MyWindowClass", L"DirectX Application", 
+		WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 1024, 768, NULL, NULL, NULL, NULL);
 
 	//creation failed
 	if (!m_hwnd)
@@ -125,6 +133,16 @@ RECT Window::getClientWindowRect()
 	return rc;
 }
 
+RECT Window::getSizeScreen()
+{
+	RECT rc;
+
+	rc.right = ::GetSystemMetrics(SM_CXSCREEN);
+	rc.bottom = ::GetSystemMetrics(SM_CYSCREEN);
+
+	return rc;	
+}
+
 void Window::onCreate()
 {
 }
@@ -143,6 +161,10 @@ void Window::onFocus()
 }
 
 void Window::onKillFocus()
+{
+}
+
+void Window::onSize()
 {
 }
 

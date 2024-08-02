@@ -18,6 +18,7 @@ SwapChain::SwapChain(HWND hwnd, UINT width, UINT height,RenderSystem* m_system) 
 	desc.OutputWindow = hwnd;
 	desc.SampleDesc.Count = 1;
 	desc.SampleDesc.Quality = 0;
+	desc.Flags = DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH;
 	desc.Windowed = TRUE;
 
 
@@ -28,11 +29,44 @@ SwapChain::SwapChain(HWND hwnd, UINT width, UINT height,RenderSystem* m_system) 
 	{
 		throw std::exception("SwapChain not created successfully");
 	}
+	reloadBuffers(width, height);
+}
 
-	
+void SwapChain::setFullScreen(bool fullscreen, unsigned int width, unsigned int height)
+{
+	resize(width, height);
+	m_swap_chain->SetFullscreenState(fullscreen, nullptr);
+}
 
-	ID3D11Texture2D* buffer=NULL;
-	hr = m_swap_chain->GetBuffer(0, __uuidof(ID3D11Texture2D), (void**)&buffer);
+
+void SwapChain::resize(unsigned int width, unsigned int height)
+{
+	if (m_rtv) m_rtv->Release();
+	if (m_dsv) m_dsv->Release();
+
+	m_swap_chain->ResizeBuffers(1, width, height, DXGI_FORMAT_R8G8B8A8_UNORM, 0);
+	reloadBuffers(width, height);
+}
+
+bool SwapChain::present(bool vsync)
+{
+
+	m_swap_chain->Present(vsync, NULL); 
+	return true;
+}
+
+SwapChain::~SwapChain()
+{
+	m_rtv->Release();
+	m_swap_chain->Release();
+}
+
+void SwapChain::reloadBuffers(unsigned int width, unsigned int height)
+{
+	ID3D11Device*device = m_system->m_d3d_device; 
+
+	ID3D11Texture2D* buffer = NULL;
+	HRESULT hr = m_swap_chain->GetBuffer(0, __uuidof(ID3D11Texture2D), (void**)&buffer);
 
 	if (FAILED(hr))
 	{
@@ -75,22 +109,4 @@ SwapChain::SwapChain(HWND hwnd, UINT width, UINT height,RenderSystem* m_system) 
 	{
 		throw std::exception("SwapChain not created successfully");
 	}
-
-
-
-
-}
-
-
-bool SwapChain::present(bool vsync)
-{
-
-	m_swap_chain->Present(vsync, NULL); 
-	return true;
-}
-
-SwapChain::~SwapChain()
-{
-	m_rtv->Release();
-	m_swap_chain->Release();
 }

@@ -42,7 +42,7 @@ class AppWindow: public Window, public InputListener
 		void updateCamera();
 		void updateSkyBox();  
 		void drawMesh(const MeshPtr& mesh, const VertexShaderPtr& vs, const PixelShaderPtr& ps, const ConstantBufferPtr& cb, 
-			const TexturePtr& tex);
+			const TexturePtr* list_tex, unsigned int num_textures);
 
 	private:
 		SwapChainPtr m_swap_chain;
@@ -53,7 +53,13 @@ class AppWindow: public Window, public InputListener
 		ConstantBufferPtr m_cb;
 		ConstantBufferPtr m_sky_cb;
 		IndexBufferPtr m_ib;
-		TexturePtr m_wood_tex;
+		TexturePtr m_earth_color_tex;
+		TexturePtr m_earth_spec_tex;
+		TexturePtr m_clouds_tex;
+		TexturePtr m_earth_night_tex;
+
+
+
 		TexturePtr m_sky_tex;
 		MeshPtr m_mesh;
 		MeshPtr m_sky_mesh;
@@ -80,6 +86,7 @@ class AppWindow: public Window, public InputListener
 		Matrix4x4 m_view_cam;
 		Matrix4x4 m_proj_cam;
 
+		float m_time = 0.0f;
 
 		bool m_play_state = false; 
 		bool m_fullscreen_state = false;

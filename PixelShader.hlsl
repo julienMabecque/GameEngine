@@ -1,14 +1,14 @@
 Texture2D EarthColor : register(t0);
-SamplerState EarthColorSampler : register(s0); //sampler
+sampler EarthColorSampler : register(s0); //sampler
 
 Texture2D EarthSpecular : register(t1);
-SamplerState EarthSpecularSampler : register(s1); //sampler
+sampler EarthSpecularSampler : register(s1); //sampler
 
 Texture2D Clouds : register(t2);
-SamplerState CloudsSampler : register(s2); //sampler
+sampler CloudsSampler : register(s2); //sampler
 
 Texture2D EarthNight : register(t3);
-SamplerState EarthNightSampler : register(s3); //sampler
+sampler EarthNightSampler : register(s3); //sampler or SamplerState
 
 struct PS_INPUT
 {
@@ -33,7 +33,7 @@ float4 psmain(PS_INPUT input) : SV_TARGET
     float4 earth_color = EarthColor.Sample(EarthColorSampler, 1.0 - input.texcoord);
     float earth_spec = EarthSpecular.Sample(EarthSpecularSampler, 1.0 - input.texcoord).r;
     float clouds = Clouds.Sample(CloudsSampler, 1.0 - input.texcoord + float2(m_time / 100.0,0)).r;
-    float4 earth_night = EarthNight.Sample(EarthNightSampler, 1.0 - input.texcoord).r;
+    float4 earth_night = EarthNight.Sample(EarthNightSampler, 1.0 - input.texcoord);
     
     //ambient light
     float ka = 1.5;
@@ -68,5 +68,7 @@ float4 psmain(PS_INPUT input) : SV_TARGET
     float3 final_light = ambient_light + diffuse_light + specular_light;
     
     return float4(final_light, 1.0);
+
+
   
 }

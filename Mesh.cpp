@@ -8,7 +8,7 @@
 #include <vector>
 #include <clocale>
 #include <cwchar>
-//#include <iostream> // Pour std::wcout et std::cout
+#include <iostream> // Pour std::wcout et std::cout
 
 #include "GraphicsEngine.h"
 #include "VertexMesh.h"
@@ -76,6 +76,8 @@ Mesh::Mesh(const wchar_t* full_path) : Resource(full_path)
                 VertexMesh vertex(Vector3D(vx, vy, vz), Vector2D(tx, ty), Vector3D(nx,ny,nz));
                 list_vertices.push_back(vertex);
                 list_indices.push_back((unsigned int)index_offset + v);
+
+                //std::cout << "Normal Loaded: (" << nx << ", " << ny << ", " << nz << ")" << std::endl;
             }
             index_offset += num_face_verts;
         }

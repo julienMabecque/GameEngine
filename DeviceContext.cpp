@@ -8,29 +8,29 @@
 #include "Texture.h"
 #include <exception>
 
-DeviceContext::DeviceContext(ID3D11DeviceContext* device_context, RenderSystem* m_system) : m_system(m_system),m_device_context(device_context)
+DeviceContext::DeviceContext(ID3D11DeviceContext* device_context, RenderSystem* m_system) : m_system(m_system), m_device_context(device_context)
 {
 
 	m_device_context = device_context;
 }
 
-void DeviceContext::clearRenderTargetColor(const SwapChainPtr& swap_chain,float red, float green, float blue, float alpha)
+void DeviceContext::clearRenderTargetColor(const SwapChainPtr& swap_chain, float red, float green, float blue, float alpha)
 {
 	FLOAT clear_color[] = { red, green, blue, alpha };
-	m_device_context->ClearRenderTargetView(swap_chain->m_rtv,clear_color);
-	m_device_context->ClearDepthStencilView(swap_chain->m_dsv, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1, 0); 
+	m_device_context->ClearRenderTargetView(swap_chain->m_rtv, clear_color);
+	m_device_context->ClearDepthStencilView(swap_chain->m_dsv, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1, 0);
 	m_device_context->OMSetRenderTargets(1, &swap_chain->m_rtv, swap_chain->m_dsv);
-	
+
 }
 
 void DeviceContext::setVertexBuffer(const VertexBufferPtr& vertex_buffer)
 {
 	UINT stride = vertex_buffer->m_size_vertex;
-	UINT offset = 0; 
+	UINT offset = 0;
 	m_device_context->IASetVertexBuffers(0, 1, &vertex_buffer->m_buffer, &stride, &offset);
 
 	m_device_context->IASetInputLayout(vertex_buffer->m_layout);
-	
+
 }
 
 void DeviceContext::setIndexBuffer(const IndexBufferPtr& index_buffer)
@@ -113,6 +113,7 @@ void DeviceContext::setConstantBuffer(const VertexShaderPtr& vertex_shader, cons
 
 void DeviceContext::setConstantBuffer(const PixelShaderPtr& pixel_shader, const  ConstantBufferPtr& buffer)
 {
+	m_device_context->PSSetConstantBuffers(0, 1, &buffer->m_buffer);
 }
 
 

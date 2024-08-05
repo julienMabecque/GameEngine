@@ -28,6 +28,7 @@ VS_OUTPUT vsmain(VS_INPUT input)
     
     //World space
     output.position = mul(input.position, m_world);
+    
     output.direction_to_camera = normalize(output.position.xyz - m_camera_position.xyz);
     //View space
     output.position = mul(output.position, m_view);

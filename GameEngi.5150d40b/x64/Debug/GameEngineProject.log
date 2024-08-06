@@ -3,7 +3,10 @@ C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(116,44)
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(117,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(118,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(119,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(65,32): warning C4244: '=' : conversion de 'ULONGLONG' en 'long', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(50,32): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(53,33): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(56,34): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(69,32): warning C4244: '=' : conversion de 'ULONGLONG' en 'long', perte possible de données
   main.cpp
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(116,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(117,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données

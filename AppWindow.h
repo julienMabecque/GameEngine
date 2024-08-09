@@ -67,6 +67,12 @@ private:
 	TexturePtr m_windows_tex;
 	TexturePtr m_wood_tex;
 
+	/*TexturePtr m_cottage_tex;
+	TexturePtr m_farmhouse_tex;
+	TexturePtr m_woodBox_tex;
+	TexturePtr m_woodEater_tex;
+	TexturePtr m_woodPlank_tex;*/
+
 	MeshPtr m_mesh;
 	MeshPtr m_torus_mesh;
 	MeshPtr m_plane_mesh;
@@ -74,6 +80,13 @@ private:
 	MeshPtr m_sky_mesh;
 	MeshPtr m_terrain_mesh; 
 	MeshPtr m_house_mesh;
+	
+	/*MeshPtr m_cottage_obj_mesh;
+	MeshPtr m_farmhouse_obj_mesh;
+	MeshPtr m_woodBox_mesh;
+	MeshPtr m_woodEater_mesh;
+	MeshPtr m_woodPlank_mesh*/;
+
 
 	MaterialPtr m_mat;
 	MaterialPtr m_bricks_mat;
@@ -85,6 +98,12 @@ private:
 	MaterialPtr m_brick_mat;
 	MaterialPtr m_windows_mat;
 	MaterialPtr m_wood_mat;
+
+	/*MaterialPtr m_cottage_mat;
+	MaterialPtr m_farmhouse_mat;
+	MaterialPtr m_woodBox_mat;
+	MaterialPtr m_woodEater_mat;
+	MaterialPtr m_woodPlank_mat;*/
 
 
 private:

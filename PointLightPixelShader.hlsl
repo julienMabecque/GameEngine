@@ -27,14 +27,14 @@ float4 psmain(PS_INPUT input) : SV_TARGET
 
     
     //ambient light
-    float ka = 1.5;
+    float ka = 4;
     float3 ia = float3(0.09, 0.082, 0.082);
     ia *= (tex_color.rgb);
     
     float3 ambient_light = ka * ia;
     
     //diffuse light
-    float kd = 0.7;
+    float kd = 1;
     float3 light_dir = normalize(m_light_position.xyz - input.world_pos.xyz);
     float distance_light_object = length(m_light_position.xyz - input.world_pos.xyz);
     

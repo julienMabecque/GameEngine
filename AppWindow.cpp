@@ -60,26 +60,55 @@ void AppWindow::render()
 	//drawMesh(m_plane_mesh, m_mat);
 
 
-	m_list_materials.clear();
-	m_list_materials.push_back(m_barrel_mat);
-	m_list_materials.push_back(m_brick_mat);
-	m_list_materials.push_back(m_windows_mat);
-	m_list_materials.push_back(m_wood_mat);
-
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < 4; i++)
 	{
-		for (int j = 0; j < 3; j++)
+		for (int j = 0; j < 2; j++)
 		{
+
+			m_list_materials.clear();
+			m_list_materials.push_back(m_barrel_mat);
+			m_list_materials.push_back(m_brick_mat);
+			m_list_materials.push_back(m_windows_mat);
+			m_list_materials.push_back(m_wood_mat);
 			updateModel(Vector3D(-14.0f + 14.0f*i , 0, -14.0f + 14.0f * j), m_list_materials);
 			drawMesh(m_house_mesh, m_list_materials);
+		
 		}
 	}
+
+	/*m_list_materials.clear();
+	m_list_materials.push_back(m_woodBox_mat);
+	updateModel(Vector3D(-12, 0.7f, 2.5f), m_list_materials);
+	drawMesh(m_woodBox_mesh, m_list_materials);
+	m_list_materials.clear();
+	m_list_materials.push_back(m_woodBox_mat);
+	updateModel(Vector3D(-12, 0, 2), m_list_materials);
+	drawMesh(m_woodBox_mesh, m_list_materials);
+	m_list_materials.clear();
+	m_list_materials.push_back(m_woodBox_mat);
+	updateModel(Vector3D(-12, 0, 2.8f), m_list_materials);
+	drawMesh(m_woodBox_mesh, m_list_materials);
+
+	m_list_materials.clear();
+	m_list_materials.push_back(m_woodEater_mat);
+	updateModel(Vector3D(0, 0, -12), m_list_materials);
+	drawMesh(m_woodEater_mesh, m_list_materials);
+
+	m_list_materials.clear();
+	m_list_materials.push_back(m_woodPlank_mat);
+	updateModel(Vector3D(-12, 0, 0.5f), m_list_materials);
+	drawMesh(m_woodPlank_mesh, m_list_materials);*/
+
 
 
 	m_list_materials.clear();
 	m_list_materials.push_back(m_terrain_mat);
 	updateModel(Vector3D(0, 0, 0), m_list_materials);
 	drawMesh(m_terrain_mesh, m_list_materials);
+	
+
+
+	
 
 
 	m_list_materials.clear();
@@ -181,7 +210,7 @@ void AppWindow::updateLight()
 	m_light_rot_y += 1.57f * m_delta_time;
 	float dist_from_origin = 3.0f;
 	//m_light_position = Vector4D(cos(m_light_rot_y) * dist_from_origin, 2.0f, sin(m_light_rot_y) * dist_from_origin, 1.0f);
-	m_light_position = Vector4D(180, 140,70, 1.0f);
+	m_light_position = Vector4D(-200, 140,-360, 1.0f);
 
 }
 
@@ -230,13 +259,20 @@ void AppWindow::onCreate()
 	m_bricks_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\brick.png");
 	m_earth_color_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\earth_color.jpg"); */
 
-	m_sky_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\sky.jpg");
-	m_sand_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\sand.jpg");
+	m_sky_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\desertSky.png");
+	m_sand_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\sand-on-beach-summer-texture-1965356.jpg");
+	//m_grass_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\grass.jpg");
 
 	m_barrel_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\barrel.jpg");
 	m_brick_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\house_brick.jpg");
 	m_windows_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\house_windows.jpg");
 	m_wood_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\house_wood.jpg");
+
+	/*m_cottage_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\cottage_diffuse.png");
+	m_farmhouse_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\Farmhouse Texture.jpg");
+	m_woodBox_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\box_None_BaseColor.png");
+	m_woodEater_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\manger_None_BaseColor.png");
+	m_woodPlank_tex = GraphicsEngine::get()->getTextureManager()->createTextureFromFile(L"Assets\\Textures\\untitled_None_BaseColor.png");*/
 
 	/*m_mesh = GraphicsEngine::get()->getMeshManager()->createMeshFromFile(L"Assets\\Meshes\\scene.obj");
 	m_torus_mesh = GraphicsEngine::get()->getMeshManager()->createMeshFromFile(L"Assets\\Meshes\\torus.obj");
@@ -246,6 +282,12 @@ void AppWindow::onCreate()
 	m_sky_mesh = GraphicsEngine::get()->getMeshManager()->createMeshFromFile(L"Assets\\Meshes\\sphere.obj");
 	m_terrain_mesh = GraphicsEngine::get()->getMeshManager()->createMeshFromFile(L"Assets\\Meshes\\terrain.obj");
 	m_house_mesh = GraphicsEngine::get()->getMeshManager()->createMeshFromFile(L"Assets\\Meshes\\house.obj");
+
+	/*m_cottage_obj_mesh = GraphicsEngine::get()->getMeshManager()->createMeshFromFile(L"Assets\\Meshes\\cottageFinal.obj");
+	m_farmhouse_obj_mesh = GraphicsEngine::get()->getMeshManager()->createMeshFromFile(L"Assets\\Meshes\\farmhouse_obj.obj");
+	m_woodBox_mesh = GraphicsEngine::get()->getMeshManager()->createMeshFromFile(L"Assets\\Meshes\\woodBox.obj");
+	m_woodEater_mesh = GraphicsEngine::get()->getMeshManager()->createMeshFromFile(L"Assets\\Meshes\\woodEater.obj");
+	m_woodPlank_mesh = GraphicsEngine::get()->getMeshManager()->createMeshFromFile(L"Assets\\Meshes\\woodPlank.obj");*/
 
 	RECT rc = this->getClientWindowRect();
 	m_swap_chain = GraphicsEngine::get()->getRenderSystem()->createSwapChain(this->m_hwnd, rc.right-rc.left,rc.bottom-rc.top);
@@ -265,6 +307,26 @@ void AppWindow::onCreate()
 	m_bricks_mat = GraphicsEngine::get()->createMaterial(m_mat);
 	m_bricks_mat->addTexture(m_bricks_tex);
 	m_bricks_mat->setCullMode(CULL_MODE_BACK);*/
+
+	/*m_cottage_mat = GraphicsEngine::get()->createMaterial(m_mat);
+	m_cottage_mat->addTexture(m_cottage_tex);
+	m_cottage_mat->setCullMode(CULL_MODE_BACK);
+
+	m_farmhouse_mat = GraphicsEngine::get()->createMaterial(m_mat);
+	m_farmhouse_mat->addTexture(m_farmhouse_tex);
+	m_farmhouse_mat->setCullMode(CULL_MODE_BACK);
+
+	m_woodBox_mat = GraphicsEngine::get()->createMaterial(m_mat);
+	m_woodBox_mat->addTexture(m_woodBox_tex);
+	m_woodBox_mat->setCullMode(CULL_MODE_BACK);
+
+	m_woodEater_mat = GraphicsEngine::get()->createMaterial(m_mat);
+	m_woodEater_mat->addTexture(m_woodEater_tex);
+	m_woodEater_mat->setCullMode(CULL_MODE_BACK);
+
+	m_woodPlank_mat = GraphicsEngine::get()->createMaterial(m_mat);
+	m_woodPlank_mat->addTexture(m_woodPlank_tex);
+	m_woodPlank_mat->setCullMode(CULL_MODE_BACK);*/
 
 	m_terrain_mat = GraphicsEngine::get()->createMaterial(m_mat);
 	m_terrain_mat->addTexture(m_sand_tex);
@@ -290,7 +352,7 @@ void AppWindow::onCreate()
 	m_sky_mat->addTexture(m_sky_tex);
 	m_sky_mat->setCullMode(CULL_MODE_FRONT);
 
-	m_world_cam.setTranslation(Vector3D(0, 0, -2));
+	m_world_cam.setTranslation(Vector3D(-5, 1, -5));
 
 	m_list_materials.reserve(32);
 }

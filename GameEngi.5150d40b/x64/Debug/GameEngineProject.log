@@ -1,16 +1,12 @@
-﻿  AppWindow.cpp
+﻿  SpaceShooterGame.cpp
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(116,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(117,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(118,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(119,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(124,32): warning C4244: '=' : conversion de 'ULONGLONG' en 'long', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(228,44): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(235,121): warning C4267: 'argument' : conversion de 'size_t' en 'UINT', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\AppWindow.cpp(235,101): warning C4267: 'argument' : conversion de 'size_t' en 'UINT', perte possible de données
-  main.cpp
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(116,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(117,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(118,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(119,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-  Génération de code en cours...
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(66,32): warning C4244: '=' : conversion de 'ULONGLONG' en 'long', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(262,44): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(269,121): warning C4267: 'argument' : conversion de 'size_t' en 'UINT', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(269,101): warning C4267: 'argument' : conversion de 'size_t' en 'UINT', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(411,25): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(412,25): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
   GameEngineProject.vcxproj -> C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\x64\Debug\GameEngineProject.exe

@@ -116,6 +116,11 @@ void DeviceContext::setConstantBuffer(const PixelShaderPtr& pixel_shader, const 
 	m_device_context->PSSetConstantBuffers(0, 1, &buffer->m_buffer);
 }
 
+void DeviceContext::clearDepthStencil(const SwapChainPtr& swap_chain)//provisoire
+{
+	m_device_context->ClearDepthStencilView(swap_chain->m_dsv, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
+}
+
 
 DeviceContext::~DeviceContext()
 {

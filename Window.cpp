@@ -74,7 +74,7 @@ Window::Window()
 
 		//create window
 	m_hwnd = ::CreateWindowEx(WS_EX_OVERLAPPEDWINDOW, L"MyWindowClass", L"DirectX Application", 
-		WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 1024, 768, NULL, NULL, NULL, NULL);
+		WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 1820, 1000, NULL, NULL, NULL, NULL);//size = 1024x768
 
 	//creation failed
 	if (!m_hwnd)

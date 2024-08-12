@@ -3,10 +3,20 @@ C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(116,44)
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(117,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(118,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
 C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(119,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(66,32): warning C4244: '=' : conversion de 'ULONGLONG' en 'long', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(262,44): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(269,121): warning C4267: 'argument' : conversion de 'size_t' en 'UINT', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(269,101): warning C4267: 'argument' : conversion de 'size_t' en 'UINT', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(411,25): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
-C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(412,25): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(75,32): warning C4244: '=' : conversion de 'ULONGLONG' en 'long', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(310,44): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(317,121): warning C4267: 'argument' : conversion de 'size_t' en 'UINT', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(317,101): warning C4267: 'argument' : conversion de 'size_t' en 'UINT', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(347,100): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(347,73): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(347,47): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(349,15): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(483,40): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\SpaceShooterGame.cpp(484,40): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+  main.cpp
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(116,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(117,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(118,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\Matrix4x4.h(119,44): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  Génération de code en cours...
   GameEngineProject.vcxproj -> C:\Users\julie\projetsProgPerso\GameEngine\GameEngineProject\x64\Debug\GameEngineProject.exe

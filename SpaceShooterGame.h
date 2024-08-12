@@ -11,7 +11,6 @@
 #include "InputListener.h"
 #include "Matrix4x4.h"
 
-
 class SpaceShooterGame : public Window, public InputListener
 {
 public:
@@ -70,20 +69,30 @@ private:
 	long m_new_delta;
 	float m_delta_time;
 	
+	float m_current_cam_distance;
 	float m_cam_distance = 14.0f;
+	Vector3D m_current_cam_rot;
 	Vector3D m_cam_rot;
 	Vector3D m_cam_pos;
 
-	float m_spaceship_speed = 125.0f;
+	float m_spaceship_speed = 200.0f;
+	Vector3D m_current_spaceship_pos;
 	Vector3D m_spaceship_pos;
+
+	Vector3D m_current_spaceship_rot;
 	Vector3D m_spaceship_rot; 
 
 	float m_delta_mouse_x = 0.0f; 
 	float m_delta_mouse_y = 0.0f; 
 
+	Vector3D m_asteroids_pos[400];
+	Vector3D m_asteroids_rot[400];
+	Vector3D m_asteroids_scale[400];
+
 	float m_forward = 0.0f;
 	float m_rightward = 0.0f;
 
+	bool m_turbo_mode = false;
 	bool cull = true;
 	Matrix4x4 m_world_cam;
 	Matrix4x4 m_view_cam;
